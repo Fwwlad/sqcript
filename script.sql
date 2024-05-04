@@ -1,4 +1,4 @@
-﻿USE skstudio
+USE skstudio
 CREATE TABLE Achievements(
 	id int AUTO_INCREMENT NOT NULL,
 	employeeId int NOT NULL,

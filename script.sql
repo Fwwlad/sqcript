@@ -3,7 +3,7 @@ CREATE TABLE Achievements(
 	id int AUTO_INCREMENT NOT NULL,
 	employeeId int NOT NULL,
 	name nvarchar(100) NOT NULL,
-	description nvarchar(max) NULL,
+	description nvarchar(4000) NULL,
 	photo nvarchar(100) NULL,
  CONSTRAINT PK_Achievements PRIMARY KEY CLUSTERED 
 (
@@ -73,7 +73,7 @@ CREATE TABLE Clients(
 	birthday date NOT NULL,
 	gender nvarchar(1) NOT NULL,
 	phone nvarchar(10) NOT NULL,
-	notes nvarchar(max) NULL,
+	notes nvarchar(4000) NULL,
  CONSTRAINT PK_Clients PRIMARY KEY CLUSTERED 
 (
 	id ASC
@@ -144,7 +144,7 @@ GO
 CREATE TABLE EmployeesPasswords(
 	id int AUTO_INCREMENT NOT NULL,
 	employeeId int NOT NULL,
-	password nvarchar(max) NOT NULL,
+	password nvarchar(4000) NOT NULL,
  CONSTRAINT PK_EmployeesPasswords PRIMARY KEY CLUSTERED 
 (
 	id ASC
@@ -240,7 +240,7 @@ GO
 CREATE TABLE MessagesTemplates(
 	id int AUTO_INCREMENT NOT NULL,
 	categoryId int NOT NULL,
-	text nvarchar(max) NOT NULL,
+	text nvarchar(4000) NOT NULL,
 	before bit NOT NULL,
 	hoursCount int NULL,
 	timestamp time(7) NULL,

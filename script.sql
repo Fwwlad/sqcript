@@ -55,7 +55,7 @@ CREATE TABLE `Clients`(
 	`surname` varchar(50) NOT NULL,
 	`name` varchar(50) NOT NULL,
 	`patonymic` varchar(50) NULL,
-	`birthday` `date` NOT NULL,
+	`birthday` date NOT NULL,
 	`gender` varchar(1) NOT NULL,
 	`phone` varchar(10) NOT NULL,
 	`notes` varchar(4000) NULL,
@@ -72,8 +72,8 @@ CREATE TABLE `Employees`(
 	`name` varchar(50) NOT NULL,
 	`patronymic` varchar(50) NULL,
 	`phone` varchar(10) NULL,
-	`birthday` `date` NULL,
-	`dateOfHire` `date` NOT NULL,
+	`birthday` date NULL,
+	`dateOfHire` date NOT NULL,
 	`gender` varchar(1) NOT NULL,
 	`email` varchar(50) NULL,
 	`salaryPercent` double NOT NULL,
@@ -125,8 +125,8 @@ CREATE TABLE `Experience`(
 	`id` int AUTO_INCREMENT NOT NULL,
 	`employeeId` int NOT NULL,
 	`name` varchar(50) NOT NULL,
-	`startDate` `date` NOT NULL,
-	`endDate` `date` NULL,
+	`startDate` date NOT NULL,
+	`endDate` date NULL,
  CONSTRAINT `PK_Experience` PRIMARY KEY 
 (
 	`id` ASC
@@ -137,10 +137,10 @@ CREATE TABLE `Experience`(
 CREATE TABLE `ExpirationDates`(
 	`id` int AUTO_INCREMENT NOT NULL,
 	`materialId` int NOT NULL,
-	`startDate` `date` NOT NULL,
-	`endDate` `date` NOT NULL,
-	`purchaseDate` `date` NOT NULL,
-	`disposalDate` `date` NULL,
+	`startDate` date NOT NULL,
+	`endDate` date NOT NULL,
+	`purchaseDate` date NOT NULL,
+	`disposalDate` date NULL,
 CONSTRAINT `PK_ExpirationDates` PRIMARY KEY 
 (
 	`id` ASC

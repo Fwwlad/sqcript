@@ -1,4 +1,4 @@
-USE `SKstudio`;
+USE `skstudio`;
 /****** Object:  Table `Achievements`    Script Date: 04.05.2024 18:40:29 ******/
 CREATE TABLE `Achievements`(
 	`id` int AUTO_INCREMENT NOT NULL,
@@ -337,5 +337,5 @@ ALTER TABLE `Services` CHECK CONSTRAINT `FK_Services_Cate;ries`
 ;
 USE `master`
 ;
-ALTER DATABASE `SKstudio` SET  READ_WRITE 
+ALTER DATABASE `skstudio` SET  READ_WRITE 
 ;

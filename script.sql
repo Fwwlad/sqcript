@@ -253,85 +253,51 @@ CONSTRAINT `PK_TypesOfMaterials` PRIMARY KEY
 ALTER TABLE `Achievements`  ADD  CONSTRAINT FOREIGN KEY (`employeeId`)
 REFERENCES `Employees` (`id`)
 ;
-ALTER TABLE `Achievements` CHECK CONSTRAINT `FK_Achievements_Employees`
-;
 ALTER TABLE `Appointments`   ADD  CONSTRAINT FOREIGN KEY (`clientId`)
 REFERENCES `Clients` (`id`)
-;
-ALTER TABLE `Appointments` CHECK CONSTRAINT `FK_Appointments_Clients`
 ;
 ALTER TABLE `Appointments`   ADD  CONSTRAINT FOREIGN KEY (`employeeId`)
 REFERENCES `Employees` (`id`)
 ;
-ALTER TABLE `Appointments` CHECK CONSTRAINT `FK_Appointments_Employees`
-;
 ALTER TABLE `Appointments`   ADD  CONSTRAINT FOREIGN KEY (`serviceId`)
 REFERENCES `Services` (`id`)
-;
-ALTER TABLE `Appointments` CHECK CONSTRAINT `FK_Appointments_Services`
 ;
 ALTER TABLE `Appointments`   ADD  CONSTRAINT FOREIGN KEY (`statusId`)
 REFERENCES `StatusesOfAppointments` (`id`)
 ;
-ALTER TABLE `Appointments` CHECK CONSTRAINT `FK_Appointments_StatusesOfAppointments`
-;
 ALTER TABLE `EmployeesJobTitles`   ADD  CONSTRAINT FOREIGN KEY (`EmployeeId`)
 REFERENCES `Employees` (`id`)
-;
-ALTER TABLE `EmployeesJobTitles` CHECK CONSTRAINT `FK_EmployeesJobTitles_Employees`
 ;
 ALTER TABLE `EmployeesJobTitles`   ADD  CONSTRAINT FOREIGN KEY (`JobTitleId`)
 REFERENCES `JobTitles` (`id`)
 ;
-ALTER TABLE `EmployeesJobTitles` CHECK CONSTRAINT `FK_EmployeesJobTitles_JobTitles`
-;
 ALTER TABLE `EmployeesMobileAppPages`   ADD  CONSTRAINT FOREIGN KEY (`employeeId`)
 REFERENCES `Employees` (`id`)
-;
-ALTER TABLE `EmployeesMobileAppPages` CHECK CONSTRAINT `FK_EmployeesMobileAppPages_Employees`
 ;
 ALTER TABLE `EmployeesMobileAppPages`   ADD  CONSTRAINT FOREIGN KEY (`mobileAppPageId`)
 REFERENCES `MobileAppPages` (`id`)
 ;
-ALTER TABLE `EmployeesMobileAppPages` CHECK CONSTRAINT `FK_EmployeesMobileAppPages_MobileAppPages`
-;
 ALTER TABLE `EmployeesPasswords`   ADD  CONSTRAINT FOREIGN KEY (`employeeId`)
 REFERENCES `Employees` (`id`)
-;
-ALTER TABLE `EmployeesPasswords` CHECK CONSTRAINT `FK_EmployeesPasswords_Employees`
 ;
 ALTER TABLE `Experience`   ADD  CONSTRAINT FOREIGN KEY (`employeeId`)
 REFERENCES `Employees` (`id`)
 ;
-ALTER TABLE `Experience` CHECK CONSTRAINT `FK_Experience_Employees`
-;
 ALTER TABLE `ExpirationDates`   ADD  CONSTRAINT FOREIGN KEY (`materialId`)
 REFERENCES `Materials` (`id`)
-;
-ALTER TABLE `ExpirationDates` CHECK CONSTRAINT `FK_ExpirationDates_Materials`
 ;
 ALTER TABLE `MaterialsCharacteristics`   ADD  CONSTRAINT FOREIGN KEY (`characteristicId`)
 REFERENCES `Characteristics` (`id`)
 ;
-ALTER TABLE `MaterialsCharacteristics` CHECK CONSTRAINT `FK_MaterialsCharacteristics_Characteristics`
-;
 ALTER TABLE `MaterialsCharacteristics`   ADD  CONSTRAINT FOREIGN KEY (`materialId`)
 REFERENCES `Materials` (`id`)
-;
-ALTER TABLE `MaterialsCharacteristics` CHECK CONSTRAINT `FK_MaterialsCharacteristics_Materials`
 ;
 ALTER TABLE `MessagesTemplates`   ADD  CONSTRAINT FOREIGN KEY (`categoryId`)
 REFERENCES `Categories` (`id`)
 ;
-ALTER TABLE `MessagesTemplates` CHECK CONSTRAINT `FK_MessagesTemplates_Categories`
-;
 ALTER TABLE `PhotosOfEmployees`   ADD  CONSTRAINT FOREIGN KEY (`employeeId`)
 REFERENCES `Employees` (`id`)
 ;
-ALTER TABLE `PhotosOfEmployees` CHECK CONSTRAINT `FK_PhotosOfEmployees_Employees`
-;
 ALTER TABLE `Services`   ADD  CONSTRAINT FOREIGN KEY (`categoryId`)
 REFERENCES `Categories` (`id`)
-;
-ALTER TABLE `Services` CHECK CONSTRAINT `FK_Services_Categories`
 ;

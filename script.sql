@@ -188,7 +188,7 @@ CREATE TABLE `MessagesTemplates`(
 	text varchar(4000) NOT NULL,
 	`before` tinyint NOT NULL,
 	`hoursCount` int NULL,
-	`timestamp` `time`(7) NULL,
+	`timestamp` time NULL,
 CONSTRAINT `PK_MessagesTemplates` PRIMARY KEY 
 (
 	`id` ASC

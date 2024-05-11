@@ -87,8 +87,8 @@ CREATE TABLE [dbo].[Clients](
 	[name] [nvarchar](50) NOT NULL,
 	[patonymic] [nvarchar](50) NULL,
 	[birthday] [date] NULL,
-	[gender] [nvarchar](1) NOT NULL,
-	[phone] [nvarchar](10) NOT NULL,
+	[gender] [nvarchar](7) NOT NULL,
+	[phone] [nvarchar](20) NOT NULL,
 	[notes] [nvarchar](max) NULL,
  CONSTRAINT [PK_Clients] PRIMARY KEY CLUSTERED 
 (
@@ -106,7 +106,7 @@ CREATE TABLE [dbo].[Employees](
 	[surname] [nvarchar](50) NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
 	[patronymic] [nvarchar](50) NULL,
-	[phone] [nvarchar](10) NULL,
+	[phone] [nvarchar](20) NULL,
 	[birthday] [date] NULL,
 	[dateOfHire] [date] NOT NULL,
 	[gender] [nvarchar](7) NOT NULL,
@@ -434,3 +434,28 @@ REFERENCES [dbo].[Categories] ([id])
 GO
 ALTER TABLE [dbo].[Services] CHECK CONSTRAINT [FK_Services_Categories]
 GO
+INSERT INTO [dbo].[StatusesOfAppointments] ([name]) VALUES('запланирована')
+GO
+INSERT INTO [dbo].[StatusesOfAppointments] ([name]) VALUES('завершена')
+GO
+INSERT INTO [dbo].[StatusesOfAppointments] ([name]) VALUES('отменена')
+GO
+INSERT INTO [dbo].[StatusesOfAppointments] ([name]) VALUES('нерабочие часы')
+GO
+INSERT INTO [dbo].[StatusesOfAppointments] ([name]) VALUES('оформление')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Маникюр', '#E289F2')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Педикюр', '#39C86A')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Спа-процедуры', '#2DB6F5')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Брови', '#FF8A65')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Ресницы', '#D1584E')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Макияж', '#F5C324')
+GO
+INSERT INTO [dbo].[Categories] ([name], [UIColor]) VALUES ('Укладка', '#8F7CD1')
+GO
+

@@ -21,4 +21,9 @@ INSERT INTO [dbo].[StatusesOfAppointments]
      VALUES
            ('нерабочие часы')
 GO
+INSERT INTO [dbo].[StatusesOfAppointments]
+           ([name])
+     VALUES
+           ('оформление')
+GO
 

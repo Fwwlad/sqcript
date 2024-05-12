@@ -1,5 +1,7 @@
 CREATE DATABASE [SKstudio];
 GO
+USE [SKstudio];
+GO
 /****** Object:  Table [dbo].[Achievements]    Script Date: 12.05.2024 13:06:37 ******/
 SET ANSI_NULLS ON
 GO

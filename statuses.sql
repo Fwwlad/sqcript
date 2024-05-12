@@ -1,29 +1,10 @@
 USE [SKstudio]
 GO
-
-INSERT INTO [dbo].[StatusesOfAppointments]
-           ([name])
-     VALUES
-           ('запланирована')
+CREATE LOGIN production with password = ;
 GO
-INSERT INTO [dbo].[StatusesOfAppointments]
-           ([name])
-     VALUES
-           ('завершена')
+CREATE USER production FOR LOGIN production;
 GO
-INSERT INTO [dbo].[StatusesOfAppointments]
-           ([name])
-     VALUES
-           ('отменена')
+ALTER ROLE db_datareader ADD MEMBER production;
 GO
-INSERT INTO [dbo].[StatusesOfAppointments]
-           ([name])
-     VALUES
-           ('нерабочие часы')
+ALTER ROLE db_datawriter ADD MEMBER production;
 GO
-INSERT INTO [dbo].[StatusesOfAppointments]
-           ([name])
-     VALUES
-           ('оформление')
-GO
-
